@@ -50,7 +50,7 @@ class PeerService {
     return cleanId;
   }
 
-  // Custom Signaling Server Host (Render.com, etc.)
+  // Dedicated Signaling Server Host (Azure App Service in Jakarta)
   getServerHost() {
     try {
       const savedHost = localStorage.getItem('callan_server_host');
@@ -58,7 +58,8 @@ class PeerService {
         return savedHost.trim().replace(/^https?:\/\//, '').replace(/\/.*$/, '');
       }
     } catch (e) {}
-    return null;
+    // Default to dedicated private Azure Signaling Server in Jakarta (low latency <10ms)
+    return 'callan-server-jkt.azurewebsites.net';
   }
 
   setServerHost(newHost) {

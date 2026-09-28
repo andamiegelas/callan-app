@@ -135,29 +135,29 @@ export default function ChangeIdModal({ isOpen, onClose, currentId, onUpdateId, 
             >
               <div className="flex items-center gap-2">
                 <Server className="w-4 h-4 text-cyan-400" />
-                <span>Server WebRTC (Render.com)</span>
+                <span>Server WebRTC (Azure Jakarta)</span>
               </div>
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-800 text-cyan-400">
-                {serverHostInput ? 'Custom' : 'Default'}
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-950 border border-emerald-800 text-emerald-400 font-semibold">
+                Azure Online
               </span>
             </button>
 
             {showServerSection && (
               <div className="mt-2.5 space-y-2 bg-slate-900/60 p-3 rounded-2xl border border-slate-800 animate-in fade-in duration-150">
                 <label className="block text-[11px] font-medium text-slate-400">
-                  Domain Render.com:
+                  Domain Server Signaling:
                 </label>
                 <div className="relative">
                   <input
                     type="text"
                     value={serverHostInput}
                     onChange={handleServerChange}
-                    placeholder="misal: callan-server.onrender.com"
-                    className="w-full bg-slate-950 text-slate-200 font-mono text-xs px-3 py-2.5 rounded-xl border border-slate-700 focus:outline-none focus:border-cyan-400 placeholder:text-slate-600"
+                    placeholder="callan-server-jkt.azurewebsites.net"
+                    className="w-full bg-slate-950 text-slate-200 font-mono text-xs px-3 py-2.5 rounded-xl border border-slate-700 focus:outline-none focus:border-cyan-400 placeholder:text-slate-500"
                   />
                 </div>
-                <p className="text-[10px] text-slate-500 leading-relaxed">
-                  Masukkan domain web service dari Render.com (tanpa https://). Kosongkan jika ingin memakai server default bawaan.
+                <p className="text-[10px] text-slate-400 leading-relaxed">
+                  Default: <span className="text-cyan-300 font-mono">callan-server-jkt.azurewebsites.net</span> (Microsoft Azure Datacenter Jakarta). Koneksi WebSocket super cepat & stabil antar kota.
                 </p>
               </div>
             )}
