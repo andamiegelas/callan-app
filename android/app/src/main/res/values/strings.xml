@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Callan</string>
+    <string name="title_activity_main">Callan</string>
+    <string name="package_name">com.callan.app</string>
+    <string name="custom_url_scheme">com.callan.app</string>
+</resources>

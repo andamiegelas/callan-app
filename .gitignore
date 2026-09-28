@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing & Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Local settings
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Android build outputs & caches
+android/.gradle/
+android/build/
+android/app/build/
+android/captures/
+android/.idea/
+android/*.iml
+android/local.properties
+.gradle/
+
+# Keep the compiled APK for easy download
+!android/app/build/outputs/apk/debug/app-debug.apk
